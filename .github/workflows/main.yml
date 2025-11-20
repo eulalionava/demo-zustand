@@ -7,4 +7,4 @@ jobs:
       - name: Llamar API GitHub
         run:  |
           curl -H  "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-          https://api.github.com/repos/eulalionava/demo-zustand/branches/{branch}/protection
+          https://api.github.com/repos/eulalionava/demo-zustand/branches/main/protection
