@@ -1,0 +1,10 @@
+name: Check Branch Protection
+on: push
+jobs:
+  check-protection:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Llamar API GitHub
+        run:  |
+          curl -H  "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          https://api.github.com/repos/eulalionava/demo-zustand/branches/{branch}/protection
